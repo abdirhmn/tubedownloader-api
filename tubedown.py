@@ -4,7 +4,7 @@ from pytube import YouTube
 app = FastAPI()
 
 @app.get("/download")
-async def download_video(url: str):
+async def download_video(url: str = "https://youtube.com/shorts/8E5Pxn5AVGE?feature=share"):
     try:
         # Create a YouTube object
         yt = YouTube(url)
